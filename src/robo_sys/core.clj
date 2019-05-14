@@ -11,7 +11,7 @@
 (defn get-sensor-data [sensor-root sensor-id]
   {:id          sensor-id
    :address     (slurp (io/file (str sensor-root "/" sensor-id "/address")))
-   :driver-name (slurp (io/file (str sensor-root "/" sensor-id "driver_name")))})
+   :driver-name (slurp (io/file (str sensor-root "/" sensor-id "/driver_name")))})
 
 (defn sensor-folder [folder]
   (->> (.listFiles folder)
